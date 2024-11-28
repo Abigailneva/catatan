@@ -1,3 +1,4 @@
+import 'package:catatan/screen/Tambah_Catatan.dart';
 import 'package:catatan/screen/register.dart';
 import 'package:flutter/material.dart';
 
@@ -101,7 +102,12 @@ class LoginPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 15),
                       MaterialButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => TambahCatatan ()));
+                        },
                         color: const Color(0xff6E62E5),
                         elevation: 0,
                         shape: RoundedRectangleBorder(
@@ -129,14 +135,13 @@ class LoginPage extends StatelessWidget {
                             style:
                                 TextStyle(fontSize: 12, color: Colors.black54),
                           ),
-                        
                           GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) =>
-                                      register(), // Pastikan nama kelasnya diawali dengan huruf kapital
+                                      register(), 
                                 ),
                               );
                             },
